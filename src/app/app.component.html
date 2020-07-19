@@ -1,0 +1,10 @@
+<div class="main-container">
+    <ng-container *ngFor="let car of cars">
+        <button (click)="mostrarOclultar(car)" 
+        [ngStyle]="{'background-color': car.visible? 'green': 'red'}"
+        >Mostrar/ocultar</button>
+        <app-car-detail *ngIf="car.visible" [car]="car" (emitStock)="sumaStockTotal($event)"></app-car-detail>
+        
+    </ng-container>
+    <div><span >Total Stock: </span>{{totalStock}}</div>
+</div>

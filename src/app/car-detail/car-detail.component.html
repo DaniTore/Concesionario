@@ -1,0 +1,21 @@
+<table class="car-detail"
+    [ngStyle]="{'border-color': borderColor(car.brand)}">
+   <tr>
+        <app-car-detail-line [title]="'Modelo'" [data]="car.model" ></app-car-detail-line>
+        
+   </tr>
+   <tr>
+        <app-car-detail-line [title]="'Marca'" [data]="car.brand" ></app-car-detail-line>
+        
+   </tr>
+   <tr>
+        <app-car-detail-line [title]="'Precio'" [data]="car.price" ></app-car-detail-line>
+        
+   </tr>
+   <tr>
+        <app-car-detail-line [title]="'Stock'" [data]="car.stock" ></app-car-detail-line>
+        <td><button (click)="aumentarStock()">+</button></td>
+        <td><button (click)="restarStock()">-</button></td>
+   </tr>
+    
+</table>
